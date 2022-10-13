@@ -1,19 +1,13 @@
-import { Grid } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import LoginPage from "../../components/login";
+import SiteTitle from "../../components/siteTitle";
 
-const useStyles = makeStyles((theme)=>({
-    heading: {
-        
-    }
-}))
-function LoginPage() {
+function Login() {
     return ( 
-        <>
-        <Grid sm ={12}>
-            
-        </Grid>
-        </>
-     );
+    <>
+        <SiteTitle title="login"/>
+        <LoginPage/>
+    </> 
+    );
 }
 
-export default LoginPage;
+export default Login;
