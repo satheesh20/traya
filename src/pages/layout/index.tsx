@@ -6,7 +6,7 @@ type props = {
 function Layout({children}:props) {
     return (
     <>
-    <Box sx={{minWidth:'100%'}}>
+    <Box sx={{MaxWidth:'100vh', overflow: 'hidden'}}>
     <Grid container item >
         <Grid sm={2} item minHeight={'100vh'}  sx={{background: '#C4DB62'}} >
             <SideNav />

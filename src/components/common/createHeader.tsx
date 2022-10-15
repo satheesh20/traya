@@ -1,6 +1,6 @@
 import { Grid, IconButton, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Arrow from '../../assests/ArrowLeft.png';
 
 interface props {
     heading: string,
@@ -9,11 +9,11 @@ const useStyles= makeStyles((theme)=>({
     rootHeader: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-start',
         border: '1px solid #100F0F',
         borderRadius: '12px',
         boxSizing: 'border-box',
-        background: '#FFFFFF'
+        alignContent: 'center'
     },
     title:{
         fontFamily: 'Manrope',
@@ -29,20 +29,17 @@ const useStyles= makeStyles((theme)=>({
         alignItems: 'center'
     }
 }))
-function Header({heading}: props) {
+function CreateHeader({heading}: props) {
     const classes = useStyles();
     return ( 
     <>
     <Grid sm={12} item className={classes.rootHeader} p={1} mb={3}>
-        <Typography className={classes.title}>{heading}</Typography>
-        <Grid className={classes.adminprofile}>
-            <IconButton>
-                <AccountCircleIcon fontSize='large' />
+            <IconButton sx={{marginRight: '10px'}}>
+                <img src={Arrow.src} alt='Left Arrow'/>
             </IconButton>
-                <Typography>Admin</Typography>
-        </Grid>
+        <Typography className={classes.title}>{heading}</Typography>
     </Grid>
     </> );
 }
 
-export default Header;
+export default CreateHeader;
