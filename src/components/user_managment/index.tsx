@@ -15,8 +15,9 @@ const useStyles = makeStyles((theme)=>({
     main :{
         display: 'flex',
         justifyContent: 'space-between',
-        border: '1px solid #000', 
-        borderRadius :'12px'
+        // border: '1px solid #000', 
+        borderRadius :'12px',
+        boxShadow: 'rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px'
     }
 }))
 function USerManagment() {

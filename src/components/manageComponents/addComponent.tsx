@@ -1,4 +1,4 @@
-import { Button, FormControl, FormControlLabel, Grid, Radio, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import CreateHeader from "../common/createHeader";
 import { makeStyles } from "@mui/styles";
 import TextFields from "../common/textField";
@@ -23,6 +23,9 @@ const useStyles= makeStyles((theme)=>({
 function AddComponent() {
     const classes = useStyles();
     const [selectedValue, setSelectedValue] = useState(true);
+    const [selectedContent, setSelectedContent] = useState('');
+    const [selectedSegment, setSelectedSegment] = useState('');
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedValue(!selectedValue);
       };
@@ -35,10 +38,10 @@ function AddComponent() {
                     <TextFields placeHolder="Component Name"/>
                 </Grid>
                 <Grid item sm={6}>
-                    <TextFieldwithDropDwon placeHolder="Select Segment" items={['Segment 1','Segment 2', 'segment 3']}/>
+                    <TextFieldwithDropDwon selected={selectedContent} setSelected={setSelectedContent} placeHolder="Select Segment" items={['Segment 1','Segment 2', 'segment 3']}/>
                 </Grid>
                 <Grid item sm={6}>
-                    <TextFieldwithDropDwon placeHolder="Select Content" items={['content 1','content 2', 'content 3']}/>
+                    <TextFieldwithDropDwon selected={selectedSegment} setSelected={setSelectedSegment} placeHolder="Select Content" items={['content 1','content 2', 'content 3']}/>
                 </Grid>
                 <Grid item sm={6} container spacing={3}>
                     <Grid item sm={6}><Button fullWidth variant='outlined' >Cancel</Button></Grid>

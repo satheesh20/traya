@@ -13,7 +13,6 @@ import HomeIcon from '../../assests/home.png';
 import ComponentIcon from '../../assests/componentManagmentIcon.png';
 import UserIcon from '../../assests/userMangementIcon.png';
 import SegementIcon from '../../assests/SegmentmanagmentIcon.png';
-import { Image } from '@mui/icons-material';
 
 const useStyles = makeStyles((theme)=>({
     header: {

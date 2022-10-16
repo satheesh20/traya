@@ -10,10 +10,11 @@ const useStyles= makeStyles((theme)=>({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        border: '1px solid #100F0F',
+        // border: '1px solid #100F0F',
         borderRadius: '12px',
         boxSizing: 'border-box',
-        alignContent: 'center'
+        alignContent: 'center',
+        boxShadow: 'rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px'
     },
     title:{
         fontFamily: 'Manrope',

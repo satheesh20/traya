@@ -23,6 +23,7 @@ const useStyles= makeStyles((theme)=>({
 function AddUser() {
     const classes = useStyles();
     const [selectedValue, setSelectedValue] = useState(true);
+    const [role, setRole]=useState('');
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedValue(!selectedValue);
       };
@@ -41,7 +42,7 @@ function AddUser() {
                     <TextFields placeHolder="Mobile Number"/>
                 </Grid>
                 <Grid item sm={6}>
-                    <TextFieldwithDropDwon placeHolder="Role" items={['Admin','Content Creator']}/>
+                    <TextFieldwithDropDwon selected={role} setSelected={setRole} placeHolder="Role" items={['Admin','Content Creator']}/>
                 </Grid>
                 <Grid item sm={6}>
                     <Typography className={classes.status}>Status</Typography>

@@ -2,7 +2,7 @@ import { Grid, IconButton, InputBase, Menu, MenuItem, TextField } from "@mui/mat
 import SearchIcon from "@mui/icons-material/Search";
 import { makeStyles } from "@mui/styles";
 import ClearIcon from '@mui/icons-material/Clear';
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 const useStyles = makeStyles((theme) => ({
     root: {
       padding: "2px 4px",
@@ -38,32 +38,42 @@ const useStyles = makeStyles((theme) => ({
         alignContent: 'center',
         justifyItems: 'center',
         paddingLeft: '10px'
+    },
+    selected: {
+      '&.Mui-selected':{
+        background: '#C4DB62'
+      }
     }
   }));
 
   interface props {
     placeHolder: string
-    items:string[]
+    items:string[],
+    selected: string,
+    setSelected: (val: string) => void,
   }
-function TextFieldwithDropDwon({placeHolder,items}: props) {
-    const [value, setvalue] = useState('');
+function TextFieldwithDropDwon({placeHolder,items,selected,setSelected}: props) {
     const classes = useStyles();
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      console.log(event.target.value);
+      setSelected(event.target.value);
+    };
+  
     return ( 
         <Grid sm={12}  item mb={2}>
                 <TextField
                 className={classes.input}
-                onChange={((e)=>setvalue(e.target.value))}
-                placeholder={placeHolder}   
+                onChange={handleChange}
+                placeholder={placeHolder}
                 inputProps={{ "aria-label": `${placeHolder}`, color: '#fff'}}
-                value={value}
+                value={selected}
                 fullWidth 
                 label={ placeHolder}
                 select
-            > <Grid sm={12} bgcolor='#fff'>
-                {items.map((text:any)=>
-                    <MenuItem value={text} sx={{padding: '3px','&:hover': {background: '#C4DB62'}, borderRadius: '8px', margin: '5px'}} divider>{text}</MenuItem>
+            > 
+                {items.map((text:string)=>
+                    <MenuItem value={text} key={text} sx={{padding: '3px','&:hover': {background: '#C4DB62'}, borderRadius: '8px', margin: '5px'}}  divider className={classes.selected}>{text}</MenuItem>
                 )}
-                </Grid>
             </TextField>    
         </Grid>
      );
