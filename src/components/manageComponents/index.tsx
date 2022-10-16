@@ -85,7 +85,7 @@ function ComponentManagment() {
             <Header heading='Manage Components' />
             <Grid container item sm ={12} className={classes.main} p={3}>
                 <Grid sm={2}>
-                    <ButtonWithRoute text="+Add Component" route="userManagement/addComponent" />
+                    <ButtonWithRoute text="+Add Component" route="manageComponents/addComponent" />
                 </Grid>
                 <Grid sm={12} marginY="20px">
                 <Datagrids
