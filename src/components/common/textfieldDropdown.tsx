@@ -74,7 +74,7 @@ function TextFieldwithDropDwon({placeHolder,items,selected,setSelected}: props) 
                 {items.map((text:string)=>
                     <MenuItem value={text} key={text} sx={{padding: '3px','&:hover': {background: '#C4DB62'}, borderRadius: '8px', margin: '5px'}}  divider className={classes.selected}>{text}</MenuItem>
                 )}
-            </TextField>    
+            </TextField>
         </Grid>
      );
 }
