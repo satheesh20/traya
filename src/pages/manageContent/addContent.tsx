@@ -1,16 +1,16 @@
-import AddComponent from "../../components/manageComponents/addComponent";
+import AddContent from "../../components/manage_content/addContent";
 import SiteTitle from "../../components/siteTitle";
 import Layout from "../layout";
 
-function Add_Component() {
+function Add_Content() {
     return ( 
         <>
             <SiteTitle title='Add Component'/>
             <Layout>
-                <AddComponent /> 
+                <AddContent /> 
             </Layout>
         </>
     );
 }
 
-export default Add_Component;
+export default Add_Content;

@@ -13,7 +13,7 @@ import HomeIcon from '../../assests/home.png';
 import ComponentIcon from '../../assests/componentManagmentIcon.png';
 import UserIcon from '../../assests/userMangementIcon.png';
 import SegementIcon from '../../assests/SegmentmanagmentIcon.png';
-
+import ContentIcon from '../../assests/NewspaperClipping.png';
 const useStyles = makeStyles((theme)=>({
     header: {
         fontFamily: 'Manrope',
@@ -47,11 +47,17 @@ const navarItems = [
                 route: '/manageSegments',
                 text: 'Manage Segment',
                 img: SegementIcon
-            },{
+            },
+            {
                 route: '/manageComponents',
                 text: 'Manage Components',
                 img: ComponentIcon
-            }
+            },
+            {
+              route: '/manageContent',
+              text: 'Manage Content',
+              img: ContentIcon
+          }
 ]
 export default function SideNav() {
     const classes = useStyles();

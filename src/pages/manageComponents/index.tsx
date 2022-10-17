@@ -4,7 +4,7 @@ import Layout from "../layout";
 
 function ManageComponents() {
     return ( 
-        <><SiteTitle title="Components" /><Layout><ComponentManagment /></Layout></>
+        <><SiteTitle title="manage components" /><Layout><ComponentManagment /></Layout></>
      );
 }
 

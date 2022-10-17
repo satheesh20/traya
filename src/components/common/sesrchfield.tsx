@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
       flex: 1
     },
     iconButton: {
-      padding: 10
+      padding: 10,
+      marginLeft: '20px'
     },
     divider: {
       height: 28,
