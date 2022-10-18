@@ -86,7 +86,7 @@ function AddSegment() {
                     <TextFieldwithDropDwon placeHolder="Condition Type" selected={condition} setSelected={setCondition}  items={['Gender', 'Age', 'Form Status','Order Count','Order Created']} />
                 </Grid>
                 <Grid item sm={3}>
-                    <TextFields placeHolder="Segment Name" />
+                    <TextFields placeHolder="Condition Value" />
                 </Grid>
                 <IconButton>
                     <ClearIcon  fontSize="large"/>
