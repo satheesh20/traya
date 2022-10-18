@@ -30,20 +30,23 @@ const useStyles= makeStyles((theme)=>({
         alignItems: 'center'
     }
 }))
+
 function Header({heading}: props) {
     const classes = useStyles();
+
     return ( 
     <>
-    <Grid sm={12} item className={classes.rootHeader} p={1} mb={3}>
-        <Typography className={classes.title}>{heading}</Typography>
-        <Grid className={classes.adminprofile}>
-            <IconButton>
-                <AccountCircleIcon fontSize='large' />
-            </IconButton>
-                <Typography>Admin</Typography>
+        <Grid sm={12} item className={classes.rootHeader} p={1} mb={3}>
+            <Typography className={classes.title}>{heading}</Typography>
+            <Grid className={classes.adminprofile}>
+                <IconButton>
+                    <AccountCircleIcon fontSize='large' />
+                </IconButton>
+                    <Typography>Admin</Typography>
+            </Grid>
         </Grid>
-    </Grid>
-    </> );
+    </> 
+    );
 }
 
 export default Header;

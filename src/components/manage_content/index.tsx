@@ -1,4 +1,4 @@
-import { Grid, IconButton, Tooltip } from "@mui/material";
+import { Box, Button, Grid, IconButton, Modal, Tooltip, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import ButtonWithRoute from "../common/buttonwithroute";
 import Header from "../common/header";
@@ -11,6 +11,8 @@ import {
 import { GridCellParams, GridColDef } from "@mui/x-data-grid";
 import { useState } from "react";
 import Datagrids, { datagridCellExpand } from "../common/datagrids";
+import style from "styled-jsx/style";
+
 const useStyles = makeStyles((theme)=>({
     main :{
         display: 'flex',
@@ -41,6 +43,7 @@ function Manage_content() {
           icon: <ViewIcon />
         }
       ];
+
       const gridColumns: GridColDef[] = [
         { field: 'id', headerName: 'Sl No', flex: 0.5 },
         { field: 'contentName', headerName: 'Content Name', flex: 1, renderCell: datagridCellExpand },
@@ -81,7 +84,9 @@ function Manage_content() {
           }
         }
       ];
-    return ( <>
+
+    return ( 
+    <>
         <Grid container >
             <Header heading='Manage Content' />
             <Grid container item sm ={12} className={classes.main} p={3}>
@@ -98,7 +103,8 @@ function Manage_content() {
                 </Grid>
             </Grid>
         </Grid>
-    </> );
+    </> 
+  );
 }
 
 export default Manage_content;

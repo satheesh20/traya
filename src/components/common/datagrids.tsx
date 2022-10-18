@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { FunctionComponent } from 'react'
 import { DataGrid, GridColDef, } from '@mui/x-data-grid';
-
 import { Box, IconButton, Paper, Popper, TextField, Typography } from "@mui/material";
 import { createStyles, makeStyles } from "@mui/styles";
 import { GridCellParams } from "@mui/x-data-grid";
@@ -164,11 +163,6 @@ export function datagridCellExpand(params: GridCellParams) {
   );
 }
 
-interface SpecialCSV {
-  filename: string,
-  gridRows: any[];
-}
-
 interface Props {
   gridColumns: GridColDef[];
   gridRows: any[];
@@ -204,9 +198,6 @@ const Datagrids: FunctionComponent<Props> = ({gridColumns, gridRows, setSelectio
   };
 
   React.useEffect(() => {
-    // if(page!=0){
-    //   setPage(0)
-    // }
     if(searchBool){
       setRows(gridRows);
     }
@@ -221,31 +212,6 @@ const Datagrids: FunctionComponent<Props> = ({gridColumns, gridRows, setSelectio
     
   },[selectionModel])
 
-//   function CustomToolbar() {
-//     return (
-//     //   <GridToolbarContainer>
-//     //     <GridColumnsToolbarButton />
-//     //     <GridFilterToolbarButton />
-//     //     <GridDensitySelector />
-//     //     {specialcsv ? 
-//     //       <CsvDownload data={specialcsv.gridRows} filename={specialcsv.filename}
-//     //         className='rootCon'
-//     //         style={{
-//     //           border: 'none',
-//     //           background: 'transparent',
-//     //           cursor: 'pointer'
-//     //         }}
-//     //       >
-//     //         <Box display="flex" flexDirection="row">
-//     //           <Box>
-//     //             <Typography style={{fontWeight: 500, fontSize: '14px', marginTop: '2px'}}>EXPORT</Typography>
-//     //           </Box>
-//     //         </Box>
-//     //       </CsvDownload>: 
-//     //       <GridToolbarExport />}
-//     //   </GridToolbarContainer>
-//     );
-//   }
 
   function QuickSearchToolbar(props: QuickSearchToolbarProps) {
     const classes = useStyles();
@@ -291,16 +257,6 @@ const Datagrids: FunctionComponent<Props> = ({gridColumns, gridRows, setSelectio
             setPage(params.pageCount - 1)
           }
         }}
-        // state={{
-        //   keyboard: {
-        //     cell: null,
-        //     columnHeader: null,
-        //     isMultipleKeyPressed: false,
-        //   }
-        // }}
-        // components={{
-        //   Toolbar: searchBool ? QuickSearchToolbar : CustomToolbar,
-        // }}
         selectionModel ={selectionModel?  selectionModel : undefined}
         rowsPerPageOptions={[10, 20, 30, 40]} density="comfortable"
         onSelectionModelChange={setSelection ? (selectionMod: any ) =>{

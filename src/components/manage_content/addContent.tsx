@@ -20,6 +20,7 @@ const useStyles= makeStyles((theme)=>({
         color: '#999999'
     },
 }))
+
 function AddContent() {
     const classes = useStyles();
     const [selectedValue, setSelectedValue] = useState(true);
@@ -29,6 +30,7 @@ function AddContent() {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedValue(!selectedValue);
       };
+
     return ( 
         <>
         <CreateHeader heading="Add Content" />

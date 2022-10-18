@@ -32,26 +32,28 @@ const useStyles = makeStyles((theme)=>({
         lineHeight: '110%',
     }
 }))
+
 function LoginPage() {
     const classes = useStyles();
+
     return (
         <>
-        <Grid container spacing={20} mt={0}>
-            <Grid sm ={12} item className={classes.root}>
-                <Typography className={classes.heading}>Traya-CMS</Typography>
-            </Grid>
-            <Grid item sm={12} className={classes.root2}>
-                <Typography className={classes.title} mb={2}>
-                    Login
-                </Typography>
-                <Grid display='flex' border='1px solid #222227' borderRadius={'4px'} width='70%' justifyContent={'center'} alignItems={'center'}>
-                    <IconButton>
-                        <img src={GoogleIcon.src} alt='google Icon' />
-                    </IconButton>
-                    <Typography>Login With Google</Typography>
+            <Grid container spacing={20} mt={0}>
+                <Grid sm ={12} item className={classes.root}>
+                    <Typography className={classes.heading}>Traya-CMS</Typography>
+                </Grid>
+                <Grid item sm={12} className={classes.root2}>
+                    <Typography className={classes.title} mb={2}>
+                        Login
+                    </Typography>
+                    <Grid display='flex' border='1px solid #222227' borderRadius={'4px'} width='70%' justifyContent={'center'} alignItems={'center'}>
+                        <IconButton>
+                            <img src={GoogleIcon.src} alt='google Icon' />
+                        </IconButton>
+                        <Typography>Login With Google</Typography>
+                    </Grid>
                 </Grid>
             </Grid>
-        </Grid>
         </>
      );
 }

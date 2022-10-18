@@ -3,6 +3,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { makeStyles } from "@mui/styles";
 import ClearIcon from '@mui/icons-material/Clear';
 import { SetStateAction, useState } from "react";
+
 const useStyles = makeStyles((theme) => ({
     root: {
       padding: "2px 4px",

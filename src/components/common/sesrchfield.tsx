@@ -33,13 +33,12 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: '10px'
     }
   }));
+
 function SearchField() {
     const [value, setvalue] = useState('');
     const classes = useStyles();
+
     return ( 
-        // <TextField fullWidth  sx={{
-        //     "& fieldset": { border: 'none' },
-        //   }} />
         <Grid sm={12}  item className={classes.searchborder} >
                 <InputBase
                 className={classes.input}
@@ -60,7 +59,7 @@ function SearchField() {
                 </IconButton>
             </Grid>
         </Grid>
-     );
+    );
 }
 
 export default SearchField;

@@ -29,26 +29,27 @@ function AddComponent() {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedValue(!selectedValue);
       };
+
     return ( 
         <>
-        <CreateHeader heading="Add Component" />
-        <Grid container sm={12} item >
-            <Grid item sm={12}>
-                <Grid item sm={6}>
-                    <TextFields placeHolder="Component Name"/>
-                </Grid>
-                <Grid item sm={6}>
-                    <TextFieldwithDropDwon selected={selectedContent} setSelected={setSelectedContent} placeHolder="Select Segment" items={['Segment 1','Segment 2', 'segment 3']}/>
-                </Grid>
-                <Grid item sm={6}>
-                    <TextFieldwithDropDwon selected={selectedSegment} setSelected={setSelectedSegment} placeHolder="Select Content" items={['content 1','content 2', 'content 3']}/>
-                </Grid>
-                <Grid item sm={6} container spacing={3}>
-                    <Grid item sm={6}><Button fullWidth variant='outlined' >Cancel</Button></Grid>
-                    <Grid item sm={6}><Button fullWidth variant='contained'sx={{background: '#C4DB62'}}>Save</Button></Grid>
+            <CreateHeader heading="Add Component" />
+            <Grid container sm={12} item >
+                <Grid item sm={12}>
+                    <Grid item sm={6}>
+                        <TextFields placeHolder="Component Name"/>
+                    </Grid>
+                    <Grid item sm={6}>
+                        <TextFieldwithDropDwon selected={selectedContent} setSelected={setSelectedContent} placeHolder="Select Segment" items={['Segment 1','Segment 2', 'segment 3']}/>
+                    </Grid>
+                    <Grid item sm={6}>
+                        <TextFieldwithDropDwon selected={selectedSegment} setSelected={setSelectedSegment} placeHolder="Select Content" items={['content 1','content 2', 'content 3']}/>
+                    </Grid>
+                    <Grid item sm={6} container spacing={3}>
+                        <Grid item sm={6}><Button fullWidth variant='outlined' >Cancel</Button></Grid>
+                        <Grid item sm={6}><Button fullWidth variant='contained'sx={{background: '#C4DB62'}}>Save</Button></Grid>
+                    </Grid>
                 </Grid>
             </Grid>
-        </Grid>
         </>
      );
 }

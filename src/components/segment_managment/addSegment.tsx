@@ -21,6 +21,7 @@ const useStyles= makeStyles((theme)=>({
         color: '#999999'
     },
 }))
+
 function AddSegment() {
     const [selectedValue, setSelectedValue] = useState(true);
     const[condition, setCondition]=useState('');
@@ -28,6 +29,7 @@ function AddSegment() {
         setSelectedValue(!selectedValue);
       };
     const classes=useStyles();
+
     return ( 
     <>
         <CreateHeader heading="Add Segment" />

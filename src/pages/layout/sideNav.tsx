@@ -14,6 +14,7 @@ import ComponentIcon from '../../assests/componentManagmentIcon.png';
 import UserIcon from '../../assests/userMangementIcon.png';
 import SegementIcon from '../../assests/SegmentmanagmentIcon.png';
 import ContentIcon from '../../assests/NewspaperClipping.png';
+
 const useStyles = makeStyles((theme)=>({
     header: {
         fontFamily: 'Manrope',
@@ -32,6 +33,7 @@ const useStyles = makeStyles((theme)=>({
         fontSize: "16px",
     },
 }))
+
 const navarItems = [
             {
                 route: '/home',
@@ -57,12 +59,14 @@ const navarItems = [
               route: '/manageContent',
               text: 'Manage Content',
               img: ContentIcon
-          }
+            }
 ]
+
 export default function SideNav() {
     const classes = useStyles();
     const [active, setSetactive] = useState(2);
     const router = useRouter();
+
   return (
     <Box sx={{ display: 'flex'}}>
         <Box sx={{ overflow: 'auto' }}>

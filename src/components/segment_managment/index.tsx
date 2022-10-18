@@ -23,12 +23,15 @@ const useStyles = makeStyles((theme)=>({
 function Segment_Management() {
     const [gridRows, setGridRows]=useState([]);
     const classes = useStyles();
+
     const handleViewFees = (row: any) => {
         console.log('row', row);
       }
+
       const handleEditFees = (row: any) => {
         console.log('row', row);
       }
+
     const buttonData = [
         {
           title: 'Edit Fees',
@@ -41,6 +44,7 @@ function Segment_Management() {
           icon: <ViewIcon />
         }
       ];
+
       const gridColumns: GridColDef[] = [
         { field: 'id', headerName: 'Sl No', flex: 0.5 },
         { field: 'segmentName', headerName: 'Segment Name', flex: 1, renderCell: datagridCellExpand },
@@ -76,12 +80,13 @@ function Segment_Management() {
                 </div>
               );
             })
-    
             return <div>{buttonSet}</div>;
           }
         }
       ];
-    return ( <>
+
+    return ( 
+    <>
         <Grid container >
             <Header heading='Manage Segments' />
             <Grid container item sm ={12} className={classes.main} p={3}>

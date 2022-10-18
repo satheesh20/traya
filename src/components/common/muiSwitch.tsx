@@ -1,7 +1,7 @@
 import { Switch, SwitchProps } from "@mui/material";
 import { styled } from '@mui/material/styles';
 
-export const PrimarySwitch = styled(Switch)<MuiSwitchProps>(({ borderColor, color }) => ({
+export const MuiSwitch = styled(Switch)<MuiSwitchProps>(({ borderColor, color }) => ({
 	padding: 8,
 	'& .MuiSwitch-track': {
 		borderRadius: 22 / 2,

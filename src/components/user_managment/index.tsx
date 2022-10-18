@@ -23,12 +23,15 @@ const useStyles = makeStyles((theme)=>({
 function USerManagment() {
     const [gridRows, setGridRows]=useState([]);
     const classes = useStyles();
+
     const handleViewFees = (row: any) => {
         console.log('row', row);
       }
+
       const handleEditFees = (row: any) => {
         console.log('row', row);
       }
+
     const buttonData = [
         {
           title: 'Edit Fees',
@@ -41,6 +44,7 @@ function USerManagment() {
           icon: <ViewIcon />
         }
       ];
+
       const gridColumns: GridColDef[] = [
         { field: 'userID', headerName: 'User ID', flex: 0.5 },
         { field: 'name', headerName: 'Name', flex: 1, renderCell: datagridCellExpand },
@@ -79,12 +83,14 @@ function USerManagment() {
                 </div>
               );
             })
-    
+
             return <div>{buttonSet}</div>;
           }
         }
       ];
-    return ( <>
+
+    return ( 
+    <>
         <Grid container >
             <Header heading='User Managment' />
             <Grid container item sm ={12} className={classes.main} p={3}>
@@ -104,7 +110,8 @@ function USerManagment() {
                 </Grid>
             </Grid>
         </Grid>
-    </> );
+    </> 
+    );
 }
 
 export default USerManagment;

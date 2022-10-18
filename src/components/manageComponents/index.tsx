@@ -11,6 +11,7 @@ import {
 import { GridCellParams, GridColDef } from "@mui/x-data-grid";
 import { useState } from "react";
 import Datagrids, { datagridCellExpand } from "../common/datagrids";
+
 const useStyles = makeStyles((theme)=>({
     main :{
         display: 'flex',
@@ -20,15 +21,18 @@ const useStyles = makeStyles((theme)=>({
         borderRadius :'12px'
     }
 }))
+
 function ComponentManagment() {
     const [gridRows, setGridRows]=useState([]);
     const classes = useStyles();
+
     const handleViewFees = (row: any) => {
         console.log('row', row);
       }
       const handleEditFees = (row: any) => {
         console.log('row', row);
       }
+
     const buttonData = [
         {
           title: 'Edit Fees',
@@ -41,6 +45,7 @@ function ComponentManagment() {
           icon: <ViewIcon />
         }
       ];
+
       const gridColumns: GridColDef[] = [
         { field: 'id', headerName: 'Sl No', flex: 0.5 },
         { field: 'componentName', headerName: 'Component Name', flex: 1, renderCell: datagridCellExpand },
@@ -76,12 +81,13 @@ function ComponentManagment() {
                 </div>
               );
             })
-    
             return <div>{buttonSet}</div>;
           }
         }
       ];
-    return ( <>
+
+    return ( 
+    <>
         <Grid container >
             <Header heading='Manage Components' />
             <Grid container item sm ={12} className={classes.main} p={3}>
@@ -98,7 +104,8 @@ function ComponentManagment() {
                 </Grid>
             </Grid>
         </Grid>
-    </> );
+    </> 
+  );
 }
 
 export default ComponentManagment;
