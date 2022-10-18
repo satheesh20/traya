@@ -86,7 +86,7 @@ function Manage_content() {
             <Header heading='Manage Content' />
             <Grid container item sm ={12} className={classes.main} p={3}>
                 <Grid sm={2}>
-                    <ButtonWithRoute text="+Add Content" route="manageComponents/addContent" />
+                    <ButtonWithRoute text="+Add Content" route="manageContent/addContent" />
                 </Grid>
                 <Grid sm={12} marginY="20px">
                 <Datagrids

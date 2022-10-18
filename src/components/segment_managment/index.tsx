@@ -86,7 +86,7 @@ function Segment_Management() {
             <Header heading='Manage Segments' />
             <Grid container item sm ={12} className={classes.main} p={3}>
                 <Grid sm={2}>
-                    <ButtonWithRoute text="+Add Segment" route="manageComponents/addSegment" />
+                    <ButtonWithRoute text="+Add Segment" route="manageSegments/addSegment" />
                 </Grid>
                 <Grid sm={12} marginY="20px">
                 <Datagrids
