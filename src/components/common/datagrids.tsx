@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) =>
       height: "100%",
       position: "relative",
       display: "flex",
+      justifyContent: 'center',
       "& .cellValue": {
         whiteSpace: "nowrap",
         overflow: "hidden",
@@ -158,7 +159,7 @@ export function datagridCellExpand(params: GridCellParams) {
   return (
     <CellExpand
       value={params.value ? params.value.toString() : ""}
-      width={params.colDef.width || 50}
+      width={params.colDef.width || 5}
     />
   );
 }
@@ -170,7 +171,6 @@ interface Props {
   disableCheckbox?: boolean;
   selectionModel? : any,
   searchBool? : boolean,
-  specialcsv?: SpecialCSV
 }
 
 const Datagrids: FunctionComponent<Props> = ({gridColumns, gridRows, setSelection, disableCheckbox,selectionModel, searchBool, specialcsv}) => {
