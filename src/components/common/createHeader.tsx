@@ -1,6 +1,6 @@
 import { Grid, IconButton, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import Arrow from '../../assests/ArrowLeft.png';
+import Arrow from '../../assests/images/ArrowLeft.png';
 import {useRouter} from 'next/router';
 
 interface props {
@@ -36,7 +36,7 @@ function CreateHeader({heading}: props) {
     const classes = useStyles();
     return ( 
     <>
-    <Grid sm={12} item className={classes.rootHeader} p={1} mb={3}>
+    <Grid sm={12} item className={classes.rootHeader} p={2} padding='12px 26px 12px 26px'  mb={3}>
             <IconButton sx={{marginRight: '10px'}} onClick={()=> router.back()}>
                 <img src={Arrow.src} alt='Left Arrow'/>
             </IconButton>

@@ -9,11 +9,11 @@ import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import HomeIcon from '../../assests/home.png';
-import ComponentIcon from '../../assests/componentManagmentIcon.png';
-import UserIcon from '../../assests/userMangementIcon.png';
-import SegementIcon from '../../assests/SegmentmanagmentIcon.png';
-import ContentIcon from '../../assests/NewspaperClipping.png';
+import HomeIcon from '../../assests/images/home.png';
+import ComponentIcon from '../../assests/images/componentManagmentIcon.png';
+import UserIcon from '../../assests/images/userMangementIcon.png';
+import SegementIcon from '../../assests/images/SegmentmanagmentIcon.png';
+import ContentIcon from '../../assests/images/NewspaperClipping.png';
 
 const useStyles = makeStyles((theme)=>({
     header: {

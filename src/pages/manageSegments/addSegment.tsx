@@ -1,6 +1,6 @@
 import AddSegment from "../../components/segment_managment/addSegment";
 import SiteTitle from "../../components/siteTitle";
-import Layout from "../layout";
+import Layout from "../../components/layout";
 
 function Add_Segment() {
     return ( 

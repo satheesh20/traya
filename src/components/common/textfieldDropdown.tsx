@@ -41,7 +41,13 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: '10px'
     },
     selected: {
+      padding: '5px',
+      '&:hover': {background: '#C4DB62'}, 
+      borderRadius: '8px', margin: '5px',
       '&.Mui-selected':{
+        background: '#C4DB62'
+      },
+      '&:focus':{
         background: '#C4DB62'
       }
     }
@@ -73,7 +79,7 @@ function TextFieldwithDropDwon({placeHolder,items,selected,setSelected}: props) 
                 select
             > 
                 {items.map((text:string)=>
-                    <MenuItem value={text} key={text} sx={{padding: '3px','&:hover': {background: '#C4DB62'}, borderRadius: '8px', margin: '5px'}}  divider className={classes.selected}>{text}</MenuItem>
+                    <MenuItem value={text} key={text}  divider className={classes.selected}>{text}</MenuItem>
                 )}
             </TextField>
         </Grid>

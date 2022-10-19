@@ -24,7 +24,10 @@ const useStyles= makeStyles((theme)=>({
 function AddUser() {
     const classes = useStyles();
     const [selectedValue, setSelectedValue] = useState(true);
+    const [email, setEmail] = useState('');
+    const [fullName, setFullName] = useState('');
     const [role, setRole]=useState('');
+    const[mobileNumber, setMobileNumber] = useState('');
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedValue(!selectedValue);
@@ -36,13 +39,13 @@ function AddUser() {
             <Grid container sm={12} item >
                 <Grid item sm={12}>
                     <Grid item sm={6}>
-                        <TextFields placeHolder="Email Address"/>
+                        <TextFields placeHolder="Email Address" value={email} setValue={setEmail}/>
                     </Grid>
                     <Grid item sm={6}>
-                        <TextFields placeHolder="Full Name"/>
+                        <TextFields placeHolder="Full Name" value={fullName} setValue={setFullName}/>
                     </Grid>
                     <Grid item sm={6}>
-                        <TextFields placeHolder="Mobile Number"/>
+                        <TextFields placeHolder="Mobile Number" value={mobileNumber} setValue={setMobileNumber}/>
                     </Grid>
                     <Grid item sm={6}>
                         <TextFieldwithDropDwon selected={role} setSelected={setRole} placeHolder="Role" items={['Admin','Content Creator']}/>
@@ -90,7 +93,7 @@ function AddUser() {
                     </Grid>
                     <Grid item sm={6} container spacing={3}>
                         <Grid item sm={6}><Button fullWidth variant='outlined' >Cancel</Button></Grid>
-                        <Grid item sm={6}><Button fullWidth variant='contained'sx={{background: '#C4DB62'}}>Save</Button></Grid>
+                        <Grid item sm={6}><Button fullWidth variant='contained'sx={{background: '#C4DB62','&:hover': {background: '#C4DB62'}}}>Save</Button></Grid>
                     </Grid>
                 </Grid>
             </Grid>

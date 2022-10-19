@@ -1,6 +1,6 @@
 import Segment_Management from "../../components/segment_managment";
 import SiteTitle from "../../components/siteTitle";
-import Layout from "../layout";
+import Layout from "../../components/layout";
 
 function ManageSegent() {
     return (

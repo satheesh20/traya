@@ -1,6 +1,6 @@
 import SiteTitle from "../../components/siteTitle";
 import AddUser from "../../components/user_managment/addUser";
-import Layout from "../layout";
+import Layout from "../../components/layout";
 
 function AddUsers() {
     return ( 

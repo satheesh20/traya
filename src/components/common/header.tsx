@@ -36,7 +36,7 @@ function Header({heading}: props) {
 
     return ( 
     <>
-        <Grid sm={12} item className={classes.rootHeader} p={1} mb={3}>
+        <Grid sm={12} item className={classes.rootHeader} padding='12px 26px 12px 26px'  mb={3} >
             <Typography className={classes.title}>{heading}</Typography>
             <Grid className={classes.adminprofile}>
                 <IconButton>

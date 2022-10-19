@@ -3,7 +3,8 @@ import CreateHeader from "../common/createHeader";
 import { makeStyles } from "@mui/styles";
 import TextFields from "../common/textField";
 import TextFieldwithDropDwon from "../common/textfieldDropdown";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Router, useRouter } from "next/router";
 
 const useStyles= makeStyles((theme)=>({
     rootHeader: {
@@ -21,14 +22,20 @@ const useStyles= makeStyles((theme)=>({
     },
 }))
 
-function AddContent() {
+function EditContent() {
     const classes = useStyles();
     const [selectedValue, setSelectedValue] = useState(true);
     const [selectedContent, setSelectedContent] = useState('');
     const [displayName, setDisplayName] = useState('');
     const [type, setType]= useState('');
     const [ref, setRef] = useState('');
-
+    const router = useRouter();
+    const { contentId } = router.query;
+    
+    useEffect(() => {
+      
+    }, [])
+    
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedValue(!selectedValue);
       };
@@ -60,4 +67,4 @@ function AddContent() {
      );
 }
 
-export default AddContent;
+export default EditContent;

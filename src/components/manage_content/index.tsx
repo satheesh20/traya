@@ -12,9 +12,9 @@ import {
 import { GridCellParams, GridColDef } from "@mui/x-data-grid";
 import { useEffect, useState } from "react";
 import Datagrids, { datagridCellExpand } from "../common/datagrids";
-import { api } from "../apis/api";
-import Delete from '../../assests/DeleteIcon.png';
-import DeleteSuccessIcon from '../../assests/DeleteSuccessIcon.png';
+import Delete from '../../assests/images/DeleteIcon.png';
+import DeleteSuccessIcon from '../../assests/images/DeleteSuccessIcon.png';
+import { getContents, deleteContents } from "../../services/contents";
 
 const useStyles = makeStyles((theme)=>({
     main :{
@@ -100,7 +100,7 @@ function Manage_content() {
 
       const getAllContents=async () => {
         try{
-          const res = await  api.contents.getContents();
+          const res = await getContents();
           console.log(res);
           let rowData = res?.map((row:any, index:number) => {
             return({
@@ -126,7 +126,7 @@ function Manage_content() {
       }
 
       const deleteContent =async () => {
-         const res = await api.contents.deleteContent(id);
+         const res = await deleteContents(id);
          console.log(res);
          if(res.status===200){
           setSuccess(true);

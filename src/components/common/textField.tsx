@@ -1,8 +1,6 @@
 import { Grid, IconButton, InputBase, TextField } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
 import { makeStyles } from "@mui/styles";
-import ClearIcon from '@mui/icons-material/Clear';
-import { useState } from "react";
+
 const useStyles = makeStyles((theme) => ({
     root: {
       padding: "2px 4px",
@@ -42,17 +40,18 @@ const useStyles = makeStyles((theme) => ({
   }));
 
   interface props {
-    placeHolder: string
+    placeHolder: string,
+    value:string,
+    setValue: (arg:string) => void
   }
-function TextFields({placeHolder}: props) {
-    const [value, setvalue] = useState('');
+function TextFields({placeHolder,value,setValue}: props) {
     const classes = useStyles();
 
     return ( 
         <Grid sm={12}  item mb={2}>
                 <TextField
                 className={classes.input}
-                onChange={((e)=>setvalue(e.target.value))}
+                onChange={((e)=>setValue(e.target.value))}
                 placeholder={placeHolder}
                 inputProps={{ "aria-label": `${placeHolder}`, color: '#fff' }}
                 value={value}

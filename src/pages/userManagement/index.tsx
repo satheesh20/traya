@@ -1,6 +1,6 @@
 import SiteTitle from "../../components/siteTitle";
 import USerManagment from "../../components/user_managment";
-import Layout from "../layout";
+import Layout from "../../components/layout";
 
 function User_Managment() {
     return ( 

@@ -24,7 +24,10 @@ const useStyles= makeStyles((theme)=>({
 
 function AddSegment() {
     const [selectedValue, setSelectedValue] = useState(true);
+    const [displayName, setDisplayName] = useState('');
     const[condition, setCondition]=useState('');
+    const[value, setValue] = useState('');
+    
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedValue(!selectedValue);
       };
@@ -36,7 +39,7 @@ function AddSegment() {
         <Grid container>
             <Grid item sm={12} p={3} pb={0} sx={{boxShadow: 'rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px', borderRadius: '8px', marginBottom: '20px'}} >
                 <Grid item sm={6}>
-                    <TextFields placeHolder="Segment Name" />
+                    <TextFields placeHolder="Segment Name" value={displayName} setValue={setDisplayName} />
                 </Grid>
                 <Grid item sm={6}>
                         <Typography className={classes.status}>Status</Typography>
@@ -88,7 +91,7 @@ function AddSegment() {
                     <TextFieldwithDropDwon placeHolder="Condition Type" selected={condition} setSelected={setCondition}  items={['Gender', 'Age', 'Form Status','Order Count','Order Created']} />
                 </Grid>
                 <Grid item sm={3}>
-                    <TextFields placeHolder="Condition Value" />
+                    <TextFields placeHolder="Condition Value" value={value} setValue={setValue} />
                 </Grid>
                 <IconButton>
                     <ClearIcon  fontSize="large"/>

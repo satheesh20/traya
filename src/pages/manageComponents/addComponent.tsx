@@ -1,6 +1,6 @@
 import AddComponent from "../../components/manageComponents/addComponent";
 import SiteTitle from "../../components/siteTitle";
-import Layout from "../layout";
+import Layout from "../../components/layout";
 
 function Add_Component() {
     return ( 

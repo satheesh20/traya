@@ -9,7 +9,7 @@ function ButtonWithRoute({text, route}: props) {
     <>
     <Link href={route}>
         <Grid sm={12} justifyContent='flex-end' display={'flex'}>
-            <Button variant="contained" sx={{textTransform: 'none', fontSize: '16px', fontWeight: '500', textFamily: 'Manrope', background: '#C4DB62', borderRadius :'8px'}}>{text}</Button>
+            <Button variant="contained" sx={{textTransform: 'none', fontSize: '16px', fontWeight: '500', textFamily: 'Manrope', background: '#C4DB62', borderRadius :'8px','&:hover': {background: '#C4DB62'}}}>{text}</Button>
         </Grid>
     </Link>
     </> 

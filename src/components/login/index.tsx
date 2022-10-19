@@ -1,6 +1,6 @@
 import { Grid, IconButton, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import GoogleIcon from '../../assests/GoogleIcon.png';
+import GoogleIcon from '../../assests/images/GoogleIcon.png';
 
 const useStyles = makeStyles((theme)=>({
     heading: {

@@ -8,10 +8,10 @@ function Layout({children}:props) {
     <>
         <Box sx={{MaxWidth:'100vh', overflow: 'hidden'}}>
             <Grid container item >
-                <Grid sm={2} item minHeight={'100vh'}  sx={{background: '#C4DB62'}} >
+                <Grid sm={1.8} item minHeight={'100vh'}  sx={{background: '#C4DB62'}} >
                     <SideNav />
                 </Grid>
-                <Grid sm={10} p={2}>
+                <Grid sm={10.2} p={2}>
                     {children}
                 </Grid>
             </Grid>

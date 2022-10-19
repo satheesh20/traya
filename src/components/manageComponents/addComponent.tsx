@@ -25,6 +25,7 @@ function AddComponent() {
     const [selectedValue, setSelectedValue] = useState(true);
     const [selectedContent, setSelectedContent] = useState('');
     const [selectedSegment, setSelectedSegment] = useState('');
+    const [displayName, setDisplayName] = useState('');
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedValue(!selectedValue);
@@ -36,7 +37,7 @@ function AddComponent() {
             <Grid container sm={12} item >
                 <Grid item sm={12}>
                     <Grid item sm={6}>
-                        <TextFields placeHolder="Component Name"/>
+                        <TextFields placeHolder="Component Name" value={displayName} setValue={setDisplayName}/>
                     </Grid>
                     <Grid item sm={6}>
                         <TextFieldwithDropDwon selected={selectedContent} setSelected={setSelectedContent} placeHolder="Select Segment" items={['Segment 1','Segment 2', 'segment 3']}/>
@@ -46,7 +47,7 @@ function AddComponent() {
                     </Grid>
                     <Grid item sm={6} container spacing={3}>
                         <Grid item sm={6}><Button fullWidth variant='outlined' >Cancel</Button></Grid>
-                        <Grid item sm={6}><Button fullWidth variant='contained'sx={{background: '#C4DB62'}}>Save</Button></Grid>
+                        <Grid item sm={6}><Button fullWidth variant='contained'sx={{background: '#C4DB62','&:hover': {background: '#C4DB62'}}}>Save</Button></Grid>
                     </Grid>
                 </Grid>
             </Grid>
